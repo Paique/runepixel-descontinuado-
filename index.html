@@ -1,11 +1,11 @@
-<!-- Proudly coded by Billy (https://bybilly.uk) -->
-<!-- Version: 1.9 -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<!-- Info meta tags, important for social media + SEO -->
-	<title>Runepixel - Site oficial</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runepixel - Site oficial</title>
 	<meta name="description" content="Nosso Ip 'runepixel.enxada.host'.">
 	<meta property="og:title" content="Runepixel - Site oficial">
 	<meta property="og:site_name" content="Runepixel">
@@ -13,65 +13,162 @@
 	<meta property="og:image" content="https://bybilly.uk/portal/img/minecraft.jpg">
 	<meta property="og:url" content="https://bybilly.uk/">
 	<meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
 
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/stylesheet.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-	<div class="container">
-		<div class="logo">
-			<!-- In the img folder, upload your logo -->
-			<!-- Make sure you name it 'logo.png' -->
-			<img src="img/logo.gif" alt="MyServer logo">
-		</div>
+    <div id="content" style="display: none">
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">RunePixel</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./mapa">Mapa</a></li>
+                    <li><a href="https://discord.gg/aDn9sK6tAB">Discord</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
 
-		<div class="items">
-			<!-- Replace # with your forum URL-->
-			<a href="https://runepixel.fandom.com/pt-br/" class="item forums">
-			<div>
-				<img src="img/forums.png" alt="Minecraft forums icon" class="img">
-				<p class="subtitle">saiba mais na</p>
-				<p class="title">Wiki!</p>
-			</div>
-			</a>
+    <section class="home">
+    </section>
+    <div style="height: 1000px">
+        <!-- just to make scrolling effect possible -->
+        <h2 class="myH2">O que é o Runepixel?</h2>
+        <p class="myP">O servidor é focado em guerra constantes entre Cidades/Reinos, e guerras globais envolvendo todas as Cidades/Reinos,
+            mas você não precisa estar em uma cidade para aproveitar de todo o conteúdo do servidor, você pode se divertir de
+            diversas maneiras, tanto solo quanto junto a outros jogadores, socialize e divirta-se!.</p>
 
-			<!-- Replace # with your store URL -->
-			<a href="#" class="item store">
-			<div>
-				<img src="img/store.png" alt="Minecraft store icon" class="img">
-				<p class="subtitle">faça donates em</p>
-				<p class="title">Loja</p>
-			</div>
-			</a>
+        <p class="myP">Nós queremos que você seja FORTE e imponha suas leis em cima da sua cidade, ou, caso sua cidade seja forte o bastante, imponha leis em todo o servidor, pois incentivamos o crescimento das cidades o suficiente para que seja possivel dominar o servidor!. </p>
 
-			<!-- Replace # with your vote URL -->
-			<a href="./mapa" class="item vote">
-			<div>
-				<img src="img/mapa.png" alt="Minecraft voting icon" class="img">
-				<p class="title">Mapa</p>
-			</div>
-			</a>
+        <p class="myP">Pra ajudar você a expandir seus reinos criamos items, encantamentos, habilidades e skills unicas que vão animar as coisas na hora do PVP.
+            O combate também foi aprimorado e adaptado para as novas versões, usando a "velocidade de ataque" das versões anteriores a 1.9, faça seus combos a vontade!...  Também há a possibilidade de usar a segunda mão no combate, com machados, arcos, espadas e os escudos convencionais da 1.9+.
+            
+            </p>
+        <p class="myP">RESSALVA:</p>
+        <p class="myP">
+            A segunda mão ainda tem muitos bugs, por isso, items na segunda mão ainda não procam em suas habilidades upadas, como combate, arquearia e etc.
+        </p>
+    </div>
+
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+
+            var scroll = $(window).scrollTop();
+            if (scroll > 500) {
+                var video = document.getElementById("myVideo");
+                video.pause();
+                console.log(scroll)
+                $('#myVideo').css({
+                    filter: "blur(" + (10) + "px)"
+                }) 
+            } else {
+                var video = document.getElementById("myVideo");
+                video.play();
+                $('#myVideo').css({
+                    filter: "none"
+                })
+
+            }
+            
 
 
-		</div>
 
-		<div class="playercount">
-			<!-- Replace play.myserver.net with your IP address -->
-			<!-- Do it for both examples below -->
-			<!-- Please set both your IP and port -->
-			<p>Junte-se a <span class="sip" data-ip="br.enxadahost.com" data-port="10110">
-			0</span> players online em <span class="ip">runepixel.enxada.host</span></p>
-		</div>
-		
-	</div>
-	
+        });
 
 
-	<script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
-	<script src="js/firefly.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script>
+    </script>
+    <!--
+    
+-->
+    <video autoplay muted loop id="myVideo">
+        <source src="./img/timelapse.mp4" type="video/mp4">
+    </video>
+    <div class="Titulo">
+        <h1>Conheça Runepixel!</h1>
+    </div>
+
+    <div class="mais">
+        <a class="baixo">ᐁ Mais ᐁ</a>
+    </div>
+
+
+
+      <div class="players">
+       <p>Junte-se a  <span data-playercounter-ip="runepixel.enxada.host">0</span>players em <span class="ip"><a id="mytext">runepixel.enxada.host</a></span> </p>
+       <p class="texto2">Dica: Copie o ip do servidor clicando nele!</p>
+    </div>
+
+    
+
+
+
+ <div class="discord">
+    <iframe src="https://ptb.discord.com/widget?id=840314983287750667&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>     
+ </div>
+    </div>
+    <div id="loading" style="display: block">
+        <div class="video-container">
+        <video autoplay muted loop id="emdev">
+            <source src="./img/emdev.mp4" type="video/mp4">
+        </video>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+        
+        
+        
+        <div class="container">
+            <div class="row">
+                <h6>Sobre</h6>
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2021 todos os direitos reservados para
+                        <a href="#">Runepixel</a>.
+                    </p>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                          <p class="text-justify">Site oficial do RunePixel feito por <a href="https://twitter.com/paiique">Paique</a></p>
+                        </div>
+            </div>
+  </footer>
+
+
+
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
 </body>
+
+
+
+
+
+
+
+
 </html>
